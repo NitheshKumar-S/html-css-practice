@@ -270,7 +270,7 @@ footer {
 }
 
 /* Typing animation */
-.typing { color: var(--primary); }
+.typing { color: var(--white); }
 .cursor {
     animation: blink 1s infinite;
     color: var(--primary);

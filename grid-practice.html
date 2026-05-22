@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Grid Practice</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: sans-serif; padding: 20px; }
+
+    /* ========================
+       GRID BASICS
+       ======================== */
+    .grid-basic {
+      display: grid;
+      
+      /* Define columns */
+      grid-template-columns: 200px 200px 200px;  /* 3 fixed columns */
+      /* grid-template-columns: 1fr 1fr 1fr; */  /* 3 equal columns */
+      /* grid-template-columns: repeat(3, 1fr); */ /* same thing */
+      /* grid-template-columns: 200px 1fr 200px; */ /* sidebar layout */
+      
+      /* Define rows */
+      grid-template-rows: 100px 100px;
+      /* grid-template-rows: auto auto; */ /* fit content */
+      
+      /* Gap */
+      gap: 16px;                /* row and column gap */
+      /* row-gap: 16px; */
+      /* column-gap: 20px; */
+      
+      background: #f0f0f0;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    .grid-item {
+      background: #3498db;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* ========================
+       SPANNING CELLS
+       ======================== */
+    .grid-span {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding: 20px;
+      background: #f0f0f0;
+      margin-bottom: 40px;
+    }
+
+    .span-2-cols {
+      grid-column: span 2;  /* takes 2 columns */
+    }
+
+    .span-full {
+      grid-column: 1 / -1;  /* spans all columns */
+    }
+
+    /* ========================
+       PAGE LAYOUT WITH GRID
+       ======================== */
+    .page-layout {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: 60px 1fr 60px;
+      grid-template-areas:
+        "header  header"
+        "sidebar main"
+        "footer  footer";
+      gap: 16px;
+      height: 400px;
+      padding: 20px;
+      background: #f0f0f0;
+      margin-bottom: 40px;
+    }
+
+    .area-header  { grid-area: header;  background: #2c3e50; }
+    .area-sidebar { grid-area: sidebar; background: #3498db; }
+    .area-main    { grid-area: main;    background: #2ecc71; }
+    .area-footer  { grid-area: footer;  background: #e74c3c; }
+
+    .page-layout > div {
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: bold;
+    }
+
+    /* ========================
+       RESPONSIVE GRID
+       ======================== */
+    .responsive-grid {
+      display: grid;
+      /* auto-fit fills as many columns as possible */
+      /* minmax sets min 250px, max fills remaining space */
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      background: #f0f0f0;
+    }
+
+    /* This grid automatically adjusts columns based on screen width */
+    /* No media queries needed */
+  </style>
+</head>
+<body>
+
+  <h2>Basic Grid</h2>
+  <div class="grid-basic">
+    <div class="grid-item">1</div>
+    <div class="grid-item">2</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item">4</div>
+    <div class="grid-item">5</div>
+    <div class="grid-item">6</div>
+  </div>
+
+  <h2>Spanning Cells</h2>
+  <div class="grid-span">
+    <div class="grid-item span-2-cols">Spans 2 columns</div>
+    <div class="grid-item">3</div>
+    <div class="grid-item span-full">Spans all 3 columns</div>
+  </div>
+
+  <h2>Page Layout with Grid Areas</h2>
+  <div class="page-layout">
+    <div class="area-header">Header</div>
+    <div class="area-sidebar">Sidebar</div>
+    <div class="area-main">Main Content</div>
+    <div class="area-footer">Footer</div>
+  </div>
+
+  <h2>Responsive Grid (resize window)</h2>
+  <div class="responsive-grid">
+    <div class="grid-item" style="height:100px">Card 1</div>
+    <div class="grid-item" style="height:100px">Card 2</div>
+    <div class="grid-item" style="height:100px">Card 3</div>
+    <div class="grid-item" style="height:100px">Card 4</div>
+    <div class="grid-item" style="height:100px">Card 5</div>
+  </div>
+
+</body>
+</html>

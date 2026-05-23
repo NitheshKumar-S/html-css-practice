@@ -1,171 +1,241 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Nithesh Kumar — AIML Developer</title>
+
     <link rel="stylesheet" href="style.css" />
+
     <script src="script.js" defer></script>
-  </head>
-  <body>
+</head>
+
+<body>
+
+    <!-- DARK MODE BUTTON -->
+    <button id="dark-toggle" class="dark-btn">
+        🌙 Dark Mode
+    </button>
 
     <!-- HERO -->
     <div class="hero">
-      <h1>Nithesh Kumar</h1>
-      <h2>
-    B.Tech AIML Student | 
-    <span id="typing-text" class="typing"></span>
-    <span class="cursor">|</span>
-</h2>
-      <p>
-        Building full stack web applications and ML-powered products 
-        from Chennai. Learning every day, shipping every week.
-      </p>
-      <a href="https://github.com/NitheshKumar-S" class="btn">
-        View My GitHub
-      </a>
+
+        <h1>Nithesh Kumar</h1>
+
+        <h2>
+            B.Tech AIML Student |
+            <span id="typing-text" class="typing"></span>
+            <span class="cursor">|</span>
+        </h2>
+
+        <p>
+            Building full stack web applications and ML-powered products
+            from Chennai. Learning every day, shipping every week.
+        </p>
+
+        <a href="https://github.com/NitheshKumar-S" class="btn">
+            View My GitHub
+        </a>
+
     </div>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN CONTAINER -->
     <div class="container">
 
-      <!-- SKILLS -->
-      <div class="section">
-        <h2 class="section-title">Tech Stack</h2>
-        <div class="skills-grid">
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">React.js</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Express.js</span>
-          <span class="skill-tag">MySQL</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">Pandas</span>
-          <span class="skill-tag">Scikit-learn</span>
-          <span class="skill-tag">SQL</span>
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">GitHub</span>
-          <span class="skill-tag">Docker</span>
-        </div>
-      </div>
+        <!-- TECH STACK -->
+        <div class="section">
 
-      <!-- PROJECTS -->
-      <div class="section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>
-              Responsive personal portfolio built with HTML, CSS, 
-              and JavaScript. Deployed on GitHub Pages.
-            </p>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">GitHub Pages</span>
+            <h2 class="section-title">Tech Stack</h2>
+
+            <!-- FILTER BUTTONS -->
+            <div class="filter-buttons">
+
+                <button class="filter-btn active"
+                        data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="frontend">
+                    Frontend
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="backend">
+                    Backend
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="data">
+                    DA/ML
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="tools">
+                    Tools
+                </button>
+
             </div>
-          </div>
 
-          <div class="project-card">
-            <h3>More projects coming soon...</h3>
-            <p>
-              Building a Job Application Tracker, IPL Analytics 
-              Dashboard, and AI Resume Analyzer over next 3 months.
-            </p>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">ML</span>
-              <span class="tag">FastAPI</span>
+            <!-- SKILLS -->
+            <div id="skills-container"
+                 class="skills-grid">
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- GOALS -->
-      <div class="section">
-        <h2 class="section-title">Current Goals</h2>
-        <ul class="goals-list">
-          <li>Build 6 deployed full stack projects in 3 months</li>
-          <li>Solve 150+ DSA problems on LeetCode</li>
-          <li>Get placed as SDE or Data Analyst</li>
-          <li>Master React, Node.js, and ML deployment</li>
-          <li>Earn 8+ industry certificates</li>
-        </ul>
-      </div>
-
-      <!-- CONTACT -->
-      <div class="section">
-        <h2 class="section-title">Connect</h2>
-        <div class="contact-links">
-          <a href="https://github.com/NitheshKumar-S" class="contact-link">
-            GitHub
-          </a>
-          <a href="https://linkedin.com/in/nithesh-kumar-80517029b" class="contact-link">
-            LinkedIn
-          </a>
-          <a href="mailto:nitheshkumarnks@gmail.com" class="contact-link">
-            Email
-          </a>
         </div>
-      </div>
+
+        <!-- PROJECTS -->
+        <div class="section">
+
+            <h2 class="section-title">Projects</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+
+                    <h3>Portfolio Website</h3>
+
+                    <p>
+                        Responsive personal portfolio built
+                        with HTML, CSS, and JavaScript.
+                        Deployed on GitHub Pages.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">GitHub Pages</span>
+
+                    </div>
+
+                </div>
+
+                <div class="project-card">
+
+                    <h3>More projects coming soon...</h3>
+
+                    <p>
+                        Building a Job Application Tracker,
+                        IPL Analytics Dashboard, and
+                        AI Resume Analyzer.
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">ML</span>
+                        <span class="tag">FastAPI</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- GOALS -->
+        <div class="section">
+
+            <h2 class="section-title">Current Goals</h2>
+
+            <ul class="goals-list">
+
+                <li>Build 6 deployed full stack projects</li>
+
+                <li>Solve 150+ DSA problems</li>
+
+                <li>Get placed as SDE or Data Analyst</li>
+
+                <li>Master React and Node.js</li>
+
+                <li>Earn industry certifications</li>
+
+            </ul>
+
+        </div>
+
+        <!-- DSA PROGRESS -->
+        <div class="section">
+
+            <h2 class="section-title">DSA Progress</h2>
+
+            <div id="progress-container"></div>
+
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section">
+
+            <h2 class="section-title">Connect</h2>
+
+            <div class="contact-links">
+
+                <a href="https://github.com/NitheshKumar-S"
+                   class="contact-link">
+                    GitHub
+                </a>
+
+                <a href="https://linkedin.com/in/nithesh-kumar-80517029b"
+                   class="contact-link">
+                    LinkedIn
+                </a>
+
+                <a href="mailto:nitheshkumarnks@gmail.com"
+                   class="contact-link">
+                    Email
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- CONTACT FORM -->
+        <div class="section">
+
+            <h2 class="section-title">Contact Me</h2>
+
+            <form id="contact-form">
+
+                <input type="text"
+                       id="name"
+                       placeholder="Your Name"
+                       required />
+
+                <input type="email"
+                       id="email"
+                       placeholder="Your Email"
+                       required />
+
+                <textarea id="message"
+                          rows="5"
+                          placeholder="Your message..."
+                          required>
+                </textarea>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
 
     </div>
 
-    <button id="dark-toggle" class="dark-btn">🌙 Dark Mode</button>
-
-    <!-- Add this in <head> -->
-<script src="script.js" defer></script>
-
-<!-- Add filter buttons above skills grid -->
-<div class="filter-buttons">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="frontend">Frontend</button>
-    <button class="filter-btn" data-filter="backend">Backend</button>
-    <button class="filter-btn" data-filter="data">DA/ML</button>
-    <button class="filter-btn" data-filter="tools">Tools</button>
-</div>
-<div id="skills-container" class="skills-grid"></div>
-
-<!-- Add typing animation in hero -->
-<h2>
-    B.Tech AIML Student | 
-    <span id="typing-text" class="typing"></span>
-    <span class="cursor">|</span>
-</h2>
-
-<!-- Add dark mode button -->
-<button id="dark-toggle" class="dark-btn">🌙 Dark Mode</button>
-
-<!-- Add DSA progress section -->
-<div class="section">
-    <h2 class="section-title">DSA Progress</h2>
-    <div id="progress-container"></div>
-</div>
-
-<!-- Add contact form -->
-<div class="section">
-    <h2 class="section-title">Contact Me</h2>
-    <div id="contact-form-container">
-        <form id="contact-form">
-            <input type="text" id="name" 
-                   placeholder="Your Name" required />
-            <input type="email" id="email" 
-                   placeholder="Your Email" required />
-            <textarea id="message" 
-                      placeholder="Your message..." 
-                      rows="4" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-</div>
-
+    <!-- FOOTER -->
     <footer>
-      <p>Built with HTML and CSS — Nithesh Kumar © 2025</p>
+        <p>
+            Built with HTML, CSS and JavaScript —
+            Nithesh Kumar © 2025
+        </p>
     </footer>
 
-  </body>
+</body>
+
 </html>
